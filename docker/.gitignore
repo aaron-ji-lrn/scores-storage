@@ -1,1 +1,4 @@
-database/data/
+# ignore all data files
+database/data/*
+# don't ignore keep files
+!.gitkeep
