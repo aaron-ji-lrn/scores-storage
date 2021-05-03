@@ -1,6 +1,7 @@
 .DS_Store
 vendor
 # ignore all data files
-var/*
+var/cache/*
+var/log/*
 # don't ignore keep files
 !.gitkeep
