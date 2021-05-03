@@ -1,3 +1,6 @@
 .DS_Store
 vendor
-var
+# ignore all data files
+var/*
+# don't ignore keep files
+!.gitkeep
