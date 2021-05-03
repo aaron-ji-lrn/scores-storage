@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+<div class="container mt-5">
+    {{ include('grading/_alert.html.twig') }}
+    {{ include('grading/_header.html.twig') }}
+    {{ include('grading/_scored.html.twig') }}
+    {{ include('grading/_questions.html.twig', {'questions': questions}) }}
+</div>
+
+{% endblock %}
+
+

@@ -26,6 +26,10 @@ services:
       - DATABASE_URL=mysql://${DATABASE_USER}:${DATABASE_PASSWORD}@database:3306/${DATABASE_NAME}?serverVersion=5.7
     volumes:
       - ./app:/var/www
+    networks:
+      - lde_internal
+      - net
+    dns: 192.168.199.3
 
   nginx:
     build:
@@ -40,3 +44,12 @@ services:
       - php-fpm
     ports:
       - "8888:80"
+    networks:
+      - net
+      - lde_net
+networks:
+  net:
+  lde_net:
+      external: true
+  lde_internal:
+      external: true

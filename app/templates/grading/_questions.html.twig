@@ -1,0 +1,29 @@
+{% for question in questions %}
+    <div class="row mt-2">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{question['type']}}</h5>
+                    <p>
+                    {{ question['stimulus'] | raw}}
+                    </p>
+                    <h5 class="card-title">Response</h5>
+                    <p>
+                    {% set validResponse = question['validation']['valid_response']['value'] %}
+                    {% set score = question['validation']['valid_response']['score'] %}
+                    {{ validResponse|join(', ')}}
+                    </p>
+                    <h5 class="card-title">Score</h5>
+                    <p>
+                        <input type="text" name="score" value="{{score}}"/> / 
+                        <input type="text" name="max_score" value="1"/>
+                    </p>
+                    <h5 class="card-title">Feedback</h5>
+                    <p>
+                        <textarea class="form-control"  rows="10"></textarea>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

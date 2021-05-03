@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Session Ids</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                </div>
+                <a href="/assessment/manual" class="btn btn-primary"> Next</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+    <script>
+        $( document ).ready(function() {
+            console.log( "ready!" );
+        });
+    </script>
+{% endblock %}
+
