@@ -5,3 +5,5 @@ var/cache/*
 var/log/*
 # don't ignore keep files
 !.gitkeep
+.env.local
+.idea

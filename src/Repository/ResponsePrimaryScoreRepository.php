@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\ResponseScores;
+use App\Entity\ResponsePrimaryScore;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method ResponseScores|null find($id, $lockMode = null, $lockVersion = null)
- * @method ResponseScores|null findOneBy(array $criteria, array $orderBy = null)
- * @method ResponseScores[]    findAll()
- * @method ResponseScores[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method ResponsePrimaryScore|null find($id, $lockMode = null, $lockVersion = null)
+ * @method ResponsePrimaryScore|null findOneBy(array $criteria, array $orderBy = null)
+ * @method ResponsePrimaryScore[]    findAll()
+ * @method ResponsePrimaryScore[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ResponseScoresRepository extends ServiceEntityRepository
+class ResponsePrimaryScoreRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ResponseScores::class);
+        parent::__construct($registry, ResponsePrimaryScore::class);
     }
 
     // /**
-    //  * @return ResponseScores[] Returns an array of ResponseScores objects
+    //  * @return ResponsePrimaryScore[] Returns an array of ResponsePrimaryScore objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class ResponseScoresRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?ResponseScores
+    public function findOneBySomeField($value): ?ResponsePrimaryScore
     {
         return $this->createQueryBuilder('r')
             ->andWhere('r.exampleField = :val')
